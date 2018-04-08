@@ -13,4 +13,5 @@ public class Fibonacci {
         }
         for (int x : fibonacciSeq) System.out.println(x);
     }
+
 }
