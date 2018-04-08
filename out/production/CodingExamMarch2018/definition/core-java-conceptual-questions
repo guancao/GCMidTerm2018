@@ -42,6 +42,9 @@ What is the difference between String, StringBuffer and StringBuilder?
 What is Singleton class?
 What is Serialization and Deserialization?
 when to use transient variable in java?
+Difference between while and do..while loop?
+What is Enum?
+What is Iterator?
 Which one will take more memory, an int or Integer?
 Why is String Immutable in Java?
 What is constructor chaining in Java?
@@ -50,6 +53,16 @@ What is JIT stands for?
 Explain Java Heap space and Garbage collection?
 Can you guarantee the garbage collection process?
 What is the difference between stack and heap in Java?
+What is reflection in java and why is it useful?
+what is multithreading in java?
+What is the use of synchronization in Java?
+What is Framework?
+What are the testing Framework available in java?
+Difference between jUnit and testNG?
+What are the dependencies for this project?
+what is dependency injection in java?
+What is static binding and dynamic binding?
+
 
 
 
