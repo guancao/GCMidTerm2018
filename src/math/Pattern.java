@@ -79,10 +79,5 @@ public class Pattern {
 			e.printStackTrace();
 		}
 
-
-		
-		
-		
-
 	}
 }

@@ -15,6 +15,7 @@ import java.sql.*;
 import java.sql.Connection;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.Properties;
 
 /**
@@ -85,7 +86,7 @@ public class ConnectDB {
 
         }
     }
-    private List<String> getResultSetData(ResultSet resultSet2, String columnName) throws SQLException {
+    private List<String> getResultSetData(ResultSet resultSet, String columnName) throws SQLException {
         List<String> dataList = new ArrayList<String>();
         while(resultSet.next()){
             String itemName = resultSet.getString(columnName);
@@ -140,7 +141,7 @@ public class ConnectDB {
         }
     }
 
-    public List<String> directDatabaseQueryExecute(String passQuery,String dataColumn)throws Exception{
+    public List<String> directDatabaseQueryExecute(String passQuery, String dataColumn)throws Exception{
         List<String> data = new ArrayList<String>();
 
         try {
@@ -338,4 +339,31 @@ public class ConnectDB {
     }
 
 
+    public void insertDataFromStringArrayListToMySql(List<String> stringList, String tableName, String columnName) {
+        try {
+            connectToMySql();
+            ps = connect.prepareStatement("DROP TABLE IF EXISTS `"+tableName+"`;");
+            ps.executeUpdate();
+//            ps = connect.prepareStatement("CREATE TABLE `"+tableName+"` (`ID` int(11) NOT NULL AUTO_INCREMENT," +
+//                    "`SortingNumbers` bigint(20) DEFAULT NULL," + "PRIMARY KEY (`ID`) );");
+            ps = connect.prepareStatement("CREATE TABLE `"+tableName+"` (`ID` int(11) NOT NULL AUTO_INCREMENT," + "`"+columnName+"` varChar(255) DEFAULT NULL,  " + "PRIMARY KEY (`ID`) );");
+
+            ps.executeUpdate();
+            for(int n=0; n<stringList.size(); n++){
+                ps = connect.prepareStatement("INSERT INTO "+tableName+" ( "+columnName+" ) VALUES(?)");
+                ps.setString(1,stringList.get(n));
+                ps.executeUpdate();
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void insertDataFromArrayListToMySql(Map<String, List<String>> foodCat, String tbl_foodmap, String country, String food) {
+    }
 }
