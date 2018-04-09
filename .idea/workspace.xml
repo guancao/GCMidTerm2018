@@ -2,21 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9771989b-51b3-4e7c-b47c-ddb973a42c7b" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/databases/MyConnectDB.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/out/production/CodingExamMarch2018/math/Pattern.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/algorithm/Numbers.java" afterPath="$PROJECT_DIR$/src/algorithm/Numbers.java" />
-      <change beforePath="$PROJECT_DIR$/src/algorithm/Sort.java" afterPath="$PROJECT_DIR$/src/algorithm/Sort.java" />
-      <change beforePath="$PROJECT_DIR$/src/data/self-driving-car" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/databases/ConnectDB.java" afterPath="$PROJECT_DIR$/src/databases/ConnectDB.java" />
-      <change beforePath="$PROJECT_DIR$/src/databases/UnitTestConnectDB.java" afterPath="$PROJECT_DIR$/src/databases/UnitTestConnectDB.java" />
-      <change beforePath="$PROJECT_DIR$/src/databases/User.java" afterPath="$PROJECT_DIR$/src/databases/User.java" />
-      <change beforePath="$PROJECT_DIR$/src/datastructure/DataReader.java" afterPath="$PROJECT_DIR$/src/datastructure/DataReader.java" />
-      <change beforePath="$PROJECT_DIR$/src/datastructure/UseArrayList.java" afterPath="$PROJECT_DIR$/src/datastructure/UseArrayList.java" />
-      <change beforePath="$PROJECT_DIR$/src/datastructure/UseMap.java" afterPath="$PROJECT_DIR$/src/datastructure/UseMap.java" />
-      <change beforePath="$PROJECT_DIR$/src/datastructure/UseQueue.java" afterPath="$PROJECT_DIR$/src/datastructure/UseQueue.java" />
-      <change beforePath="$PROJECT_DIR$/src/math/Pattern.java" afterPath="$PROJECT_DIR$/src/math/Pattern.java" />
-      <change beforePath="$PROJECT_DIR$/src/math/PrimeNumber.java" afterPath="$PROJECT_DIR$/src/math/PrimeNumber.java" />
+      <change beforePath="$PROJECT_DIR$/src/definition/core-java-conceptual-questions" afterPath="$PROJECT_DIR$/src/definition/core-java-conceptual-questions" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -105,11 +92,21 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="core-java-conceptual-questions" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/definition/core-java-conceptual-questions">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="557">
+              <caret line="210" column="0" lean-forward="true" selection-start-line="210" selection-start-column="0" selection-end-line="210" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="UseArrayList.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/datastructure/UseArrayList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="43" column="60" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="43" selection-end-column="60" />
+            <state relative-caret-position="192">
+              <caret line="41" column="40" lean-forward="false" selection-start-line="41" selection-start-column="40" selection-end-line="41" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -129,10 +126,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UseQueue.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="UseQueue.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/datastructure/UseQueue.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="627">
+            <state relative-caret-position="501">
               <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -176,7 +173,6 @@
         <option value="$PROJECT_DIR$/src/design/EmployeeInfo.java" />
         <option value="$PROJECT_DIR$/src/parser/UnitTestingStudentProfile.java" />
         <option value="$PROJECT_DIR$/src/definition/data-structure-questions" />
-        <option value="$PROJECT_DIR$/src/definition/core-java-conceptual-questions" />
         <option value="$PROJECT_DIR$/src/parser/ProcessStudentInfo.java" />
         <option value="$PROJECT_DIR$/src/problems/DuplicateWord.java" />
         <option value="$PROJECT_DIR$/src/problems/Palindrome.java" />
@@ -198,10 +194,11 @@
         <option value="$PROJECT_DIR$/src/datastructure/DataReader.java" />
         <option value="$PROJECT_DIR$/src/databases/UnitTestConnectDB.java" />
         <option value="$PROJECT_DIR$/src/algorithm/Sort.java" />
-        <option value="$PROJECT_DIR$/src/datastructure/UseArrayList.java" />
         <option value="$PROJECT_DIR$/src/databases/ConnectDB.java" />
         <option value="$PROJECT_DIR$/src/datastructure/UseMap.java" />
         <option value="$PROJECT_DIR$/src/datastructure/UseQueue.java" />
+        <option value="$PROJECT_DIR$/src/datastructure/UseArrayList.java" />
+        <option value="$PROJECT_DIR$/src/definition/core-java-conceptual-questions" />
       </list>
     </option>
   </component>
@@ -275,6 +272,18 @@
               <item name="MidtemMarch2018" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="datastructure" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MidtemMarch2018" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MidtemMarch2018" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="definition" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MidtemMarch2018" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MidtemMarch2018" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="design" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MidtemMarch2018" type="b2602c69:ProjectViewProjectNode" />
@@ -833,14 +842,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/definition/core-java-conceptual-questions">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="16" column="25" lean-forward="false" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/algorithm/UnitTestSorting.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
@@ -1067,16 +1068,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/datastructure/UseArrayList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="43" column="60" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="43" selection-end-column="60" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/datastructure/UseMap.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
@@ -1089,11 +1080,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/datastructure/UseQueue.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="627">
+        <state relative-caret-position="501">
           <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/datastructure/UseArrayList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="41" column="40" lean-forward="false" selection-start-line="41" selection-start-column="40" selection-end-line="41" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/definition/core-java-conceptual-questions">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="557">
+          <caret line="210" column="0" lean-forward="true" selection-start-line="210" selection-start-column="0" selection-end-line="210" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
