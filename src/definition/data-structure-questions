@@ -1,37 +1,126 @@
 Please answer the below Data Structure Questions:
 
 why do we need data structure?
-A.
+A. data structure is a way to store and organize information so they can be retrieved and used effectively.
+It is essential for some computer algorithms, espcially when dealing with large amount of data.
+
 What are the various operations that can be performed on different Data Structures?
+A. Stack: push, pop, search.
+LinkedList: add, get, remove, set;
+Map: add, put, get, pull;
+
 List out the areas in which data structures are applied extensively?
+A. database management system, statistical analysis, graphic analysis, operation system, compiling system
+
 what is an Array?
+A. a contain holding fixed number of elements with the same data type.
+
 what is the difference between the Array and ArrayList?
+A. Array has fixed size, ArrayList is resizable.
+
 what is LinkedList?
+A. LinkedList in Java is doubly linked list to store element, it implements List and Deque interfaces. It can contain duplicate elements.
+
 How is an Array different from Linked List?
+A. Array is size-fixed, LinkedList is re-sizable. Insertion/deletion in array is hard, which is easy in Linkedlist.
+
 what is queue?
+A. a subtype of collection interface, use FIFO.
+
 what is stack?
+A. A collection class, use FILO,
+
 what is FIFO and LIFO?
+A. FIFO, first-in first-out; FILO, first-in last-out.
+
 what is the order of complexity?
+A. an algorithm has asymptotic computation complexity, the linear increase in the input size, like 2x, leads to the
+increase in computation of finishing the algorithm by two or more factors of it.
+
 what is the best case to search an element from an array?
+A. linear search from 0 to last.
+
 what is the worst case to search an element from an array?
+A. last element.
+
 what is tree in data structure?
+A. tree is a data structure simulates a hierarchical tree structure, with a root node, and children node.
+
 what is graph in data structure?
+A. graph data structure contains a finite set of vertices (aka nodes), and a finite set of ordered pair of form (aka edge).
+Graph is used to represent many applications, such as network.
+
 what is the difference between the HashTable and HashMap?
+A. They are very similar except that HashMap allow null value for key and the order is not synchronized.
+
 What are the major data structures used in the following areas : RDBMS, Network data model and Hierarchical data model.
+A. RDBMS - array; Network - Graph; Hierarchical - tree.
+
 How HashMap works in java?
+A. HashMap use put to put key and value object into the hashmap, it store both key and value.
+
 What is ArrayIndexOutOfBoundsException in java? When it occurs?
+A. index is invalid, it happens when using an index is less than 0 or bigger than the size-1, this exception occurrs.
+
 What are the different ways of copying an array into another array?
+A. 1. read element one by one and assign the value to the new array ;
+ 2. use clone() method -- b =a.clone();
+ 3. use copyOf() method -- b = Arrays.copyOf(a, new_length);
+
 What is difference between an array and a linked list?
+A. Array is size-fixed, LinkedList is re-sizable. Insertion/deletion in array is hard, which is easy in Linkedlist.
+
 What is DFS and BFS?
+A. DFS, depth first search; BFS, breadth first search.
+
 What is Recursion?
+A. method call itself.
+
 What are linear and non linear data Structures?
+A. Linear data structure organizes data in sequential order, such as array, queue, stack, linkedlist, arraylist;
+Nonlinear data structure, the data is not organized linearly, such as tree and graph.
+
 What is Big-(O)-notation?
+A. it is a way to measure the efficacy of an algorithm on how time and space increase asymptotic when input size increases.
+
 Outlined different kind of sorting algorithm with time complexity?
+A.
+1) Selection Sort: select the smallest element and swap it with the first element, then find the second smallest element to swap
+with the second element, and then go on like that to the end. The worst time complexity is O(n*n);
+
+2) Bubble Sort: compare each element with the element next to it, if the next one is smaller, swap them; redo this until the smallest
+element is swapped to the first place. The worst time complexity is O(n*n);
+
+3) Insertion Sort: start from the beginning, if the element is smaller than the element in front of it, swap them, and continue
+until the element in front of this is no smaller; move one the next element. The worst runtime complexity is O(n*n);
+
+4) Bucket Sort: create a bucket array with the size of the largest number in the list you need to sort, put numbers into the bucket
+with corresponding index, sort them based on that. The runtime complexity is O(n);
+
+5) Merge Sort: divide and conquer algorithm. divide the list into two halves or more parts, sort each half, merge them together.
+The runtime complexity is O(n log n);
 
 Draw a table with time complexity in which it will summarize all the data structure feature's advantages and disadvantages.
   a)In terms of Accessing element.
   b)In terms of Inserting element.
   c)In terms of Searching element.
   d)In terms of Removing element.
+A. from https://www.geeksforgeeks.org/time-complexities-of-all-sorting-algorithms/
+
+Algorithm	                        Time Complexity
+                    Best	         Average	            Worst
+Selection Sort	    Ω(n^2)	            θ(n^2)	            O(n^2)
+Bubble Sort	        Ω(n)	            θ(n^2)	            O(n^2)
+Insertion Sort	    Ω(n)	            θ(n^2)	            O(n^2)
+Heap Sort	        Ω(n log(n))	        θ(n log(n))	        O(n log(n))
+Quick Sort	        Ω(n log(n))	        θ(n log(n))	        O(n^2)
+Merge Sort	        Ω(n log(n))	        θ(n log(n))	        O(n log(n))
+Bucket Sort	        Ω(n+k)	            θ(n+k)	            O(n^2)
+Radix Sort	        Ω(nk)	            θ(nk)	            O(nk)
+
+
+
+
+
 
 
