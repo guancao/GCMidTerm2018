@@ -36,7 +36,7 @@ public class Numbers {
 
     public static void main(String[] args) throws Exception {
 
-        int[] num = new int[100000];
+        int[] num = new int[1000000];
         storeRandomNumbers(num);
         Sort algo = new Sort();
         algo.selectionSort(num);
@@ -77,7 +77,6 @@ public class Numbers {
                 System.out.print(myRs.getString(columnName) + " ");
             }
 */
-
         } catch (Exception e) {
             e.printStackTrace();
         }

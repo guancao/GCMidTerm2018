@@ -22,6 +22,23 @@ public class UnitTestSorting {
         }
 
         //Now do for rest of the algorithm...................below
+        int [] unSortedArray2 = {6,9,2,5,1,0,4};
+        int [] unSortedArray3 = {6,9,2,5,1,0,4};
+        int [] unSortedArray4 = {6,9,2,5,1,0,4};
+        int [] unSortedArray5 = {6,9,2,5,1,0,4};
+        sort.bucketSort(unSortedArray2);
+        sort.mergeSort(unSortedArray3);
+        sort.bubbleSort(unSortedArray4);
+        sort.quickSort(unSortedArray5);
+        try{
+            Assert.assertEquals(sortedArray, unSortedArray2, "bucketsort is a bust");
+            Assert.assertEquals(sortedArray, unSortedArray3, "merge sort is a bust");
+            Assert.assertEquals(sortedArray, unSortedArray4, "bubble sort is a bust");
+            Assert.assertEquals(sortedArray, unSortedArray5, "quick sort is a bust");
+
+        }catch(Exception e){
+            e.getMessage();
+        }
 
 
     }
