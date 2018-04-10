@@ -13,7 +13,7 @@ public class Student {
     public Student() {
     }
 
-    public Student(String firstName, String lastName, String score, String id) {
+    public Student(String id, String firstName, String lastName, String score) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.score = score;

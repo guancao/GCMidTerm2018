@@ -66,8 +66,8 @@ public class XmlReader {
         int scor = Integer.parseInt(content);
         String sc="";
         if (scor >= 90) sc = "A";
-        if (scor >= 80) sc = "B";
-        if (scor >= 70) sc = "C";
+        else if (scor >= 80) sc = "B";
+        else if (scor >= 70) sc = "C";
         return sc;
     }
 

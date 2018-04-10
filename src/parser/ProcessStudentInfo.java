@@ -5,6 +5,7 @@ import org.xml.sax.SAXException;
 
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -34,7 +35,7 @@ public class ProcessStudentInfo {
      *
      */
 
-    public static void main(String[] args) throws ParserConfigurationException, SAXException, IOException {
+    public static void main(String[] args) throws ParserConfigurationException, SAXException, IOException, SQLException, ClassNotFoundException {
         //Path of XML data to be read.
         String pathSelenium = System.getProperty("user.dir") + "/src/parser/selenium.xml";
         String pathQtp = System.getProperty("user.dir") + "/src/parser/qtp.xml";
@@ -76,29 +77,36 @@ public class ProcessStudentInfo {
 
         //Store Qtp data into Qtp table in Database
         connectDB.insertToMongoDB(qtpStudents, "qtp");
-//        connectDB.insertDataFromArrayListToMySql(qtpStudents, "tbl_qtp", "studentList");
+        connectDB.insertDataFromStudentArrayListToMySql(qtpStudents, "tbl_qtp");
 
         //Store Selenium data into Selenium table in Database
         connectDB.insertToMongoDB(seleniumStudents, "selenium");
- //       connectDB.insertDataFromArrayListToMySql(seleniumStudents, "tbl_selenium", "studentList");
+        connectDB.insertDataFromStudentArrayListToMySql(seleniumStudents, "tbl_selenium");
 
         //Retrieve Qtp students from Database
         List<Student> stList = connectDB.readStudentListFromMongoDB("qtp");
-        System.out.println("The QTP student :::::::::::");
+        System.out.println("**** Mongo DB read out**** The QTP student :::::::::::");
         for (Student st : stList) {
             System.out.println("Student (id= "+ st.getId()+ ")\t"+ st.getFirstName() + "\t\t" + st.getLastName() + " \t Grade= " + st.getScore());
         }
-//        List<Student> stList = connectDB.readStudentListFromMySql("qtp");
-//        for (Student st : stList) {
-//            System.out.println(st.getFirstName() + " " + st.getLastName() + " " + st.getScore() + " " + st.getId());
-//        }
+        List<Student> stListMySql = connectDB.readStudentListFromMySql("tbl_qtp");
+        System.out.println("======read from MySQL database ::: QTP=========");
+        for (Student stu : stListMySql) {
+            System.out.println("Student (id= "+ stu.getId()+ ")\t"+ stu.getFirstName() + "\t\t" + stu.getLastName() + " \t Grade= " + stu.getScore());
+        }
 //
 //
         //Retrieve Selenium students from Database
         List<Student> stSelList = connectDB.readStudentListFromMongoDB("selenium");
-        System.out.println("The selenium student :::::::::::");
+        System.out.println("** Mongo DB read out** The selenium student :::::::::::");
         for (Student st : stSelList) {
             System.out.println("Student (id= "+ st.getId()+ ")\t"+ st.getFirstName() + "\t\t" + st.getLastName() + " \t Grade= " + st.getScore());
+        }
+
+        List<Student> selstListMySql = connectDB.readStudentListFromMySql("tbl_selenium");
+        System.out.println("======read from MySQL database ::: Selenium =========");
+        for (Student stus : selstListMySql) {
+            System.out.println("Student (id= "+ stus.getId()+ ")\t"+ stus.getFirstName() + "\t\t" + stus.getLastName() + " \t Grade= " + stus.getScore());
         }
     }
 }

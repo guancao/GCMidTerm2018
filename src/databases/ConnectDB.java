@@ -202,8 +202,8 @@ public class ConnectDB {
         }
         for (int i = 0; i < student.size(); i++) {
             MongoCollection<Document> collection = mongoDatabase.getCollection(profileName);
-            Document document = new Document().append("firstName", student.get(i).getFirstName()).append("lastName",
-                    student.get(i).getLastName()).append("score", student.get(i).getScore()).append("id", student.get(i).getId());
+            Document document = new Document().append("id", student.get(i).getId()).append("firstName", student.get(i).getFirstName()).append("lastName",
+                    student.get(i).getLastName()).append("score", student.get(i).getScore());
             collection.insertOne(document);
         }
         return "Student has been registered";
@@ -251,7 +251,7 @@ public class ConnectDB {
             student.setScore(score);
             String id = (String) doc.get("id");
             student.setId(id);
-            student = new Student(student.getFirstName(), student.getLastName(), student.getScore(), student.getId());
+            student = new Student(student.getId(), student.getFirstName(), student.getLastName(), student.getScore());
             list.add(student);
         }
         return list;
@@ -435,4 +435,61 @@ public class ConnectDB {
 
     }
 
+    //add this method to read List<Student> from MySql
+    public List<Student> readStudentListFromMySql(String tableName) throws SQLException, IOException, ClassNotFoundException {
+        List<Student> list = new ArrayList<Student>();
+        Student student = new Student();
+        Connection conn = connectToMySql();
+        String query = "SELECT * FROM  " + tableName;
+        // create the java statement
+        Statement st = conn.createStatement();
+        // execute the query, and get a java resultset
+        ResultSet rs = st.executeQuery(query);
+        // iterate through the java resultset
+        while (rs.next()) {
+            String id = (String) rs.getString("studentId");
+            student.setId(id);
+            String firstName = (String) rs.getString("firstName");
+            student.setFirstName(firstName);
+            String lastName = (String) rs.getString("lastName");
+            student.setLastName(lastName);
+            String score = (String) rs.getString("score");
+            student.setScore(score);
+            student = new Student(student.getId(), student.getFirstName(), student.getLastName(), student.getScore());
+            list.add(student);
+        }
+        st.close();
+        return list;
+    }
+
+    public void insertDataFromStudentArrayListToMySql(List<Student> studentlist, String tableName) {
+        try {
+            connectToMySql();
+            ps = connect.prepareStatement("DROP TABLE IF EXISTS `" + tableName + "`;");
+            ps.executeUpdate();
+//            ps = connect.prepareStatement("CREATE TABLE `"+tableName+"` (`ID` int(11) NOT NULL AUTO_INCREMENT," +
+//                    "`SortingNumbers` bigint(20) DEFAULT NULL," + "PRIMARY KEY (`ID`) );");
+            ps = connect.prepareStatement("CREATE TABLE `" + tableName + "` (`ID` int(11) NOT NULL AUTO_INCREMENT, "
+                    + "studentId varChar(20) default null, firstName varChar(255) DEFAULT NULL, "
+                    + "lastName varChar(255) default null, score varChar(10) default null, PRIMARY KEY (`ID`) );");
+            ps.executeUpdate();
+            for (int n = 0; n < studentlist.size(); n++) {
+                ps = connect.prepareStatement("INSERT INTO " + tableName + " (studentId, firstName, lastName, score) VALUES(?,?,?,?)");
+                ps.setString(1, studentlist.get(n).getId());
+                ps.setString(2, studentlist.get(n).getFirstName());
+                ps.setString(3, studentlist.get(n).getLastName());
+                ps.setString(4, studentlist.get(n).getScore());
+                ps.executeUpdate();
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
 }
+
+
